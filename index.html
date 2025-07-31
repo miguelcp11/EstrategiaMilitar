@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPACN 2025 | Estratégia Militar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 0.025em;
+        }
+        h1, h2, h3, h4 {
+            letter-spacing: -0.025em;
+        }
+        .sidebar {
+            scrollbar-width: thin;
+            scrollbar-color: #0A3D2E #f1f1f1;
+        }
+        .sidebar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .sidebar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .sidebar::-webkit-scrollbar-thumb {
+            background-color: #0A3D2E;
+            border-radius: 20px;
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .active-tab {
+            border-bottom: 3px solid #0A3D2E;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="https://militares.estrategia.com/portal/wp-content/uploads/2021/10/favicon-militares-150x150.webp" alt="Coruja Estratégia Militar" class="h-10 w-10 rounded-full shadow-md">
+                <div>
+                    <h1 class="text-xl font-bold text-[#0A3D2E] tracking-tight">CPACN 2025</h1>
+                    <p class="text-xs text-gray-600 font-medium">Estratégia Militar</p>
+                </div>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-[#0A3D2E] hover:text-green-700 font-semibold text-lg transition-all duration-300 hover:scale-105">Início</a>
+                <a href="#disciplinas" class="text-[#0A3D2E] hover:text-green-700 font-semibold text-lg transition-all duration-300 hover:scale-105">Disciplinas</a>
+                <a href="#sobre" class="text-[#0A3D2E] hover:text-green-700 font-semibold text-lg transition-all duration-300 hover:scale-105">Sobre</a>
+            </div>
+            <button class="md:hidden text-[#0A3D2E]">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden bg-white shadow-lg absolute w-full z-50">
+        <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+            <a href="#home" class="text-[#0A3D2E] hover:text-green-700 font-semibold text-lg py-3 border-b border-gray-100 transition-all duration-300 hover:pl-2">Início</a>
+            <a href="#disciplinas" class="text-[#0A3D2E] hover:text-green-700 font-semibold text-lg py-3 border-b border-gray-100 transition-all duration-300 hover:pl-2">Disciplinas</a>
+            <a href="#sobre" class="text-[#0A3D2E] hover:text-green-700 font-semibold text-lg py-3 transition-all duration-300 hover:pl-2">Sobre</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-[#0A3D2E] text-white py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-green-700">Concurso de Admissão ao CPACN 2025</h1>
+                <p class="text-xl md:text-2xl mb-8 text-gray-100 font-light">Prepare-se com o material completo e organizado pelo Estratégia Militar para conquistar sua vaga.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-6">
+                    <a href="#disciplinas" class="bg-white text-[#0A3D2E] font-semibold py-4 px-8 rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">Começar Estudos</a>
+                    <a href="#sobre" class="bg-transparent border-2 border-white text-white font-semibold py-4 px-8 rounded-lg hover:bg-white hover:text-[#0A3D2E] transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">Sobre o CPACN</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8 flex flex-col md:flex-row">
+        <!-- Sidebar -->
+        <aside id="sidebar" class="w-full md:w-64 flex-shrink-0 bg-white shadow-md rounded-lg mb-6 md:mb-0 md:mr-6 h-fit sticky top-24">
+            <div class="p-4 border-b border-gray-200">
+                <h2 class="font-bold text-lg text-[#0A3D2E]">Disciplinas</h2>
+            </div>
+            <div class="sidebar overflow-y-auto max-h-[calc(100vh-150px)]">
+                <ul class="divide-y divide-gray-200">
+                    <li>
+                        <button onclick="toggleDisciplina('matematica')" class="w-full text-left px-4 py-3 hover:bg-gray-50 flex justify-between items-center font-medium text-[#0A3D2E]">
+                            <span>Matemática</span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div id="matematica-submenu" class="hidden bg-gray-50">
+                            <ul>
+                                <li><a href="#aritmetica" class="block px-6 py-2 hover:bg-gray-100 text-sm">Aritmética</a></li>
+                                <li><a href="#algebra" class="block px-6 py-2 hover:bg-gray-100 text-sm">Álgebra</a></li>
+                                <li><a href="#geometria" class="block px-6 py-2 hover:bg-gray-100 text-sm">Geometria e Trigonometria</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <button onclick="toggleDisciplina('portugues')" class="w-full text-left px-4 py-3 hover:bg-gray-50 flex justify-between items-center font-medium text-[#0A3D2E]">
+                            <span>Língua Portuguesa</span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div id="portugues-submenu" class="hidden bg-gray-50">
+                            <ul>
+                                <li><a href="#vocabulario" class="block px-6 py-2 hover:bg-gray-100 text-sm">Vocabulário</a></li>
+                                <li><a href="#gramatica" class="block px-6 py-2 hover:bg-gray-100 text-sm">Gramática</a></li>
+                                <li><a href="#interpretacao" class="block px-6 py-2 hover:bg-gray-100 text-sm">Interpretação de Texto</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <button onclick="toggleDisciplina('sociais')" class="w-full text-left px-4 py-3 hover:bg-gray-50 flex justify-between items-center font-medium text-[#0A3D2E]">
+                            <span>Estudos Sociais</span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div id="sociais-submenu" class="hidden bg-gray-50">
+                            <ul>
+                                <li><a href="#geografia" class="block px-6 py-2 hover:bg-gray-100 text-sm">Geografia</a></li>
+                                <li><a href="#historia" class="block px-6 py-2 hover:bg-gray-100 text-sm">História</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <button onclick="toggleDisciplina('ciencias')" class="w-full text-left px-4 py-3 hover:bg-gray-50 flex justify-between items-center font-medium text-[#0A3D2E]">
+                            <span>Ciências</span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div id="ciencias-submenu" class="hidden bg-gray-50">
+                            <ul>
+                                <li><a href="#quimica" class="block px-6 py-2 hover:bg-gray-100 text-sm">Química</a></li>
+                                <li><a href="#fisica" class="block px-6 py-2 hover:bg-gray-100 text-sm">Física</a></li>
+                                <li><a href="#biologia" class="block px-6 py-2 hover:bg-gray-100 text-sm">Biologia</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <button onclick="toggleDisciplina('ingles')" class="w-full text-left px-4 py-3 hover:bg-gray-50 flex justify-between items-center font-medium text-[#0A3D2E]">
+                            <span>Inglês</span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div id="ingles-submenu" class="hidden bg-gray-50">
+                            <ul>
+                                <li><a href="#gramatica-ingles" class="block px-6 py-2 hover:bg-gray-100 text-sm">Gramática</a></li>
+                                <li><a href="#compreensao" class="block px-6 py-2 hover:bg-gray-100 text-sm">Compreensão de Texto</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Content -->
+        <main class="flex-1">
+            <section id="disciplinas" class="mb-12">
+                <h2 class="text-2xl font-bold text-[#0A3D2E] mb-6">Conteúdo Programático CPACN 2025</h2>
+                
+                <!-- Mathematics -->
+                <div id="matematica-content" class="bg-white rounded-lg shadow-md p-6 mb-8">
+                    <h3 class="text-xl font-semibold text-[#0A3D2E] mb-4 flex items-center">
+                        <i class="fas fa-square-root-alt mr-2"></i> I – MATEMÁTICA
+                    </h3>
+                    
+                    <div id="aritmetica" class="mb-6">
+                        <h4 class="text-lg font-medium text-[#0A3D2E] mb-3">ARITMÉTICA</h4>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                            <li>Numeração, bases de numeração, operações fundamentais: adição, subtração, multiplicação, divisão e valor absoluto de números inteiros</li>
+                            <li>Números primos: decomposição em fatores primos, máximo divisor comum, mínimo múltiplo comum e suas propriedades</li>
+                            <li>Frações ordinárias: ideias de fração, comparação, simplificação, as quatro operações fundamentais e redução ao mesmo denominador</li>
+                            <li>Frações decimais: noção de fração e de número decimal, operações fundamentais, conversão de fração ordinária em decimal e vice-versa, e as dízimas periódicas e suas geratrizes</li>
+                            <li>Sistema métrico: unidades legais de comprimento, área, volume, ângulo, tempo, velocidade, massa, operações fundamentais, múltiplo e submúltiplo</li>
+                            <li>Potências e raízes: definições, operações em potências, extração da raiz quadrada, potências e raízes de frações, potências de expoentes inteiros e fracionários</li>
+                            <li>Razões e proporções: razão de duas grandezas, proporção e suas propriedades, escala, divisão em partes direta e inversamente proporcionais, regras de três simples e composta, porcentagem e juros simples, cálculo de médias</li>
+                        </ul>
+                    </div>
+                    
+                    <div id="algebra" class="mb-6">
+                        <h4 class="text-lg font-medium text-[#0A3D2E] mb-3">ÁLGEBRA</h4>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                            <li>Noções sobre conjuntos: caracterização de um conjunto, subconjunto, pertinência de um elemento a um conjunto e inclusão de um conjunto em outro conjunto, união, interseção, diferença de conjuntos, simbologia de conjuntos, problemas de conjuntos, conjunto N dos números naturais, Z dos números inteiros, Q dos números racionais e R dos números reais, intervalos reais</li>
+                            <li>Números relativos: noção de números relativos, correspondência dos números reais com os pontos de uma reta e operações com números relativos</li>
+                            <li>Operações algébricas: adição, subtração, multiplicação e divisão de polinômios, produtos notáveis, fatoração, mínimo múltiplo comum e máximo divisor comum de polinômios</li>
+                            <li>Frações algébricas: expoente negativo, adição, subtração, multiplicação e divisão</li>
+                            <li>Equações e identidades, equações equivalentes, princípios gerais sobre a transformação de equações e sistema de equações</li>
+                            <li>Equações e inequações do 1º Grau, sua resolução e discussão, resolução e discussão de um sistema de duas equações, resolução de sistema com três equações com duas ou três incógnitas, artifícios de cálculos, representação gráfica de uma equação com duas incógnitas, significado gráfico da solução de um sistema de duas equações com duas incógnitas, desigualdade, e resolução de um sistema de duas inequações com duas incógnitas</li>
+                            <li>Números irracionais: idéias de número irracional, expoente fracionário, radical e seu valor, cálculo aritmético dos radicais, operações com radicais e racionalização de denominadores</li>
+                            <li>Equações do 2º grau: resolução e discussão de uma equação, relações entre coeficientes e as raízes, sistemas do 2º grau com duas incógnitas, resolução de equações biquadradas e de equações irracionais, inequações irracionais</li>
+                            <li>Trinômio do 2º Grau: decomposição de fatores de 1º grau, sinal do trinômio, forma canônica, posição de um número em relação aos zeros do trinômio, valor máximo do trinômio, inequação do 2º Grau com uma incógnita, inequações produto e quociente, sistemas de inequações do 2º Grau</li>
+                            <li>Funções – conceito de função. Domínio, imagem, contradomínio e gráficos. Funções polinomiais afim e quadrática-gráficos, variação de sinal das funções. Problemas envolvendo as funções afim e quadrática</li>
+                        </ul>
+                    </div>
+                    
+                    <div id="geometria">
+                        <h4 class="text-lg font-medium text-[#0A3D2E] mb-3">GEOMETRIA E TRIGONOMETRIA</h4>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                            <li>Introdução à geometria dedutiva: definição, postulado, teorema</li>
+                            <li>Linhas, ângulos e polígonos: igualdade de ângulos, triângulos, suas retas notáveis e soma de seus ângulos, quadriláteros, suas propriedades e soma de seus ângulos, construção geométrica e noção de lugar geométrico</li>
+                            <li>Circunferência: diâmetros e cordas, tangentes, ângulos em relação à circunferência, segmento capaz, quadrilátero inscritível e construções geométricas</li>
+                            <li>Linhas proporcionais e semelhanças: ponto que divide um segmento em uma razão dada, divisão harmônica, segmentos proporcionais, média proporcional, segmento áureo, linhas proporcionais nos triângulos, propriedade da bissetriz interna e externa, semelhança de triângulos e polígonos, e construções geométricas</li>
+                            <li>Relações métricas no triângulo retângulo e em um triângulo qualquer, medianas e altura de um triângulo qualquer</li>
+                            <li>Razões trigonométricas no triângulo retângulo e no triângulo qualquer, lei dos senos e lei dos cossenos, relação fundamental da trigonometria</li>
+                            <li>Relações métricas no círculo: linhas proporcionais no círculo, potência de um ponto em relação a um círculo, relações métricas nos quadriláteros e construções geométricas</li>
+                            <li>Polígonos Regulares: definições, propriedades, ângulo central interno e externo, relações entre lado, apótema e raio do círculo circunscrito no triângulo, no quadrado e no hexágono regular, lado do polígono de 2n lados, para n igual a 3, 4 e 5, e número de diagonais</li>
+                            <li>Medições na Circunferência: razão da circunferência para o seu diâmetro, cálculo de "Pi" pelos perímetros, o grau e seus submúltiplos em relação à medida de arcos em radianos, e mudança de sistemas</li>
+                            <li>Áreas Planas: área dos triângulos, dos quadriláteros e dos polígonos regulares, do círculo, do segmento circular, do setor circular e da coroa circular, relações métricas entre áreas e figuras equivalentes</li>
+                            <li>Ortoedros: elementos, área das faces e volumes</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Portuguese -->
+                <div id="portugues-content" class="bg-white rounded-lg shadow-md p-6 mb-8">
+                    <h3 class="text-xl font-semibold text-[#0A3D2E] mb-4 flex items-center">
+                        <i class="fas fa-book mr-2"></i> II – LÍNGUA PORTUGUESA
+                    </h3>
+                    
+                    <div id="vocabulario" class="mb-6">
+                        <h4 class="text-lg font-medium text-[#0A3D2E] mb-3">VOCABULÁRIO</h4>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                            <li>Sinonímia, antonímia, homonímia e aspectos semânticos dos vocábulos – polissemia</li>
+                        </ul>
+                    </div>
+                    
+                    <div id="gramatica" class="mb-6">
+                        <h4 class="text-lg font-medium text-[#0A3D2E] mb-3">GRAMÁTICA</h4>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                            <li>Classes de Palavras: emprego e flexões</li>
+                            <li>Os Termos da Oração</li>
+                            <li>Período Composto por Coordenação e Período Composto por Subordinação: valores semânticos</li>
+                            <li>Sintaxe de Concordância (nominal e verbal)</li>
+                            <li>Sintaxe de Regência (nominal e verbal)</li>
+                            <li>Função e Emprego dos Pronomes Pessoais e dos Pronomes Relativos</li>
+                            <li>Uso do Acento Indicador de Crase</li>
+                            <li>Sintaxe de Colocação Pronominal</li>
+                            <li>Sintaxe de Pontuação</li>
+                            <li>Acentuação Gráfica</li>
+                        </ul>
+                    </div>
+                    
+                    <div id="interpretacao">
+                        <h4 class="text-lg font-medium text-[#0A3D2E] mb-3">INTERPRETAÇÃO E PRODUÇÃO TEXTUAL</h4>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                            <li>Figuras de Linguagem</li>
+                            <li>Funções da Linguagem</li>
+                            <li>Interpretação de Textos</li>
+                            <li>Redação</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Social Studies -->
+                <div id="sociais-content" class="bg-white rounded-lg shadow-md p-6 mb-8">
+                    <h3 class="text-xl font-semibold text-[#0A3D2E] mb-4 flex items-center">
+                        <i class="fas fa-globe-americas mr-2"></i> III – ESTUDOS SOCIAIS
+                    </h3>
+                    
+                    <div id="geografia" class="mb-6">
+                        <h4 class="text-lg font-medium text-[#0A3D2E] mb-3">GEOGRAFIA DO BRASIL</h4>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                            <li>O Espaço Brasileiro: relevo, clima, vegetação, hidrografia e solos</li>
+                            <li>A Questão Ambiental: a política ambiental e os caminhos para o desenvolvimento sustentável</li>
+                            <li>A Formação do Território Brasileiro: a economia colonial e a expansão do território, a integração territorial</li>
+                            <li>O Modelo Econômico Brasileiro: a estrutura industrial, o espaço industrial, a exploração dos recursos minerais e a política energética, a indústria de turismo (perspectiva para a economia brasileira)</li>
+                            <li>A Dinâmica da Agricultura: a organização do espaço agrário, a luta pela terra e produção agrícola nacional</li>
+                            <li>As Estruturas dos Transportes e Comunicações</li>
+                            <li>A População Brasileira: a formação étnica, as migrações inter-regionais, êxodo rural e urbanização, a população e o mercado de trabalho, o crescimento populacional, a estrutura da população, a política demográfica, a distribuição de renda, a questão indígena</li>
+                            <li>A Urbanização: redes urbanas, o processo de urbanização, o espaço das cidades, especulação imobiliária e a segregação urbana, os movimentos sociais urbanos</li>
+                            <li>As Questões Regionais: as divisões regionais, região e políticas públicas, os desequilíbrios regionais</li>
+                            <li>O Brasil na Economia Global: globalização e privatização, a revolução técnico-científica e a economia brasileira</li>
+                            <li>Dívida Externa e Interna</li>
+                            <li>O Brasil e o Mercosul</li>
+                            <li>A Relação Brasil - ALCA (Associação de Livre Comércio das Américas)</li>
+                            <li>O Brasil e o Mercado Mundial</li>
+                            <li>Política Externa Brasileira no Mundo Globalizado</li>
+                            <li>As Relações Diplomáticas do Brasil com os Países de Língua Portuguesa</li>
+                            <li>A relação do Brasil e os Organismos Internacionais - ONG'S, ONU, OIT e Direitos Humanos</li>
+                            <li>O Brasil na OMC (Organização Mundial do Comércio)</li>
+                        </ul>
+                    </div>
+                    
+                    <div id="historia">
+                        <h4 class="text-lg font-medium text-[#0A3D2E] mb-3">HISTÓRIA DO BRASIL</h4>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                            <li>Expansão Ultramarina Portuguesa e chegada ao Brasil</li>
+                            <li>Da organização da Colônia ao Governo Geral</li>
+                            <li>Expansões Geográficas: Entradas e Bandeiras, conquista e colonização do Nordeste, penetração na Amazônia, conquista do Sul, Tratados e limites, Guerras no Sul</li>
+                            <li>Invasões Estrangeiras no Período Colonial</li>
+                            <li>A Economia Colonial: os ciclos do Pau-Brasil, açúcar, gado e mineração, o africano no Brasil</li>
+                            <li>Sedições e Inconfidências: movimentos nativistas, Conjuração Mineira e Baiana</li>
+                            <li>A Vida Cultural e Artística nos Séculos Coloniais</li>
+                            <li>A Corte no Rio de Janeiro: a presença da Corte Portuguesa no Brasil: realizações político-sociais</li>
+                            <li>Da Independência ao fim do Primeiro Reinado: a Guerra Cisplatina, as dificuldades éticas e as agitações políticas</li>
+                            <li>Período Regencial: lutas civis, atividades políticas e maioridade</li>
+                            <li>Segundo Reinado: pacificação das lutas internas, a conciliação política e tentativas de industrialização</li>
+                            <li>Segundo Reinado: política externa</li>
+                            <li>Segundo Reinado: situação econômica, desenvolvimento cultural e artístico, a questão dos escravos e a campanha abolicionista, a igreja e a questão dos bispos</li>
+                            <li>Brasil República: causas da queda do trono e a República da Espada</li>
+                            <li>A República Velha: o governo das oligarquias cafeeiras (a situação social, política e econômica)</li>
+                            <li>A Revolução de 1930 e o Estado Novo: a Era de Vargas</li>
+                            <li>A Era Populista: a situação interna e externa do Brasil, de Eurico Dutra a João Goulart</li>
+                            <li>Os Governos Militares: de Castelo Branco a João Batista Figueiredo</li>
+                            <li>A Nova República</li>
+                            <li>História e cultura afro-brasileira e dos povos indígenas brasileiros: do período colonial ao Brasil contemporâneo</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Sciences -->
+                <div id="ciencias-content" class="bg-white rounded-lg shadow-md p-6 mb-8">
+                    <h3 class="text-xl font-semibold text-[#0A3D2E] mb-4 flex items-center">
+                        <i class="fas fa-flask mr-2"></i> IV – CIÊNCIAS
+                    </h3>
+                    
+                    <div id="quimica" class="mb-6">
+                        <h4 class="text-lg font-medium text-[#0A3D2E] mb-3">QUÍMICA</h4>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                            <li>Matéria: conceitos, propriedades, estados físicos, classificação e características das substâncias, classificação e características das misturas, classificação e características de sistemas, alotropia, processos de separação de misturas</li>
+                            <li>Reações Químicas: conceitos, classificações, leis ponderais, equação química, representação, balanceamento, cálculos estequiométricos</li>
+                            <li>Eletroquímica: conceito, funcionamento, estrutura, células eletrolíticas, pilhas e baterias</li>
+                            <li>Velocidade das Reações: cinética química, conceito de velocidade de reação e catalisador, fatores que influenciam a velocidade das reações</li>
+                            <li>Conceitos Fundamentais de Estrutura Atômica: principais partículas atômicas, modelo atômico de Dalton, modelo atômico de Thomson, modelo atômico de Rutherford, modelo atômico de Bohr, número atômico, número de massa, elementos químicos, isótopos, isótonos, isóbaros, isoeletrônicos, íons, distribuição eletrônica (átomos neutros e íons)</li>
+                            <li>Tabela Periódica: organização, estrutura, configuração eletrônica, propriedades periódicas dos elementos</li>
+                            <li>Ligações Químicas: iônica, covalente, metálica, gases nobres e a teoria do octeto, comparações entre as substâncias (iônicas, moleculares e metálicas)</li>
+                            <li>Funções Inorgânicas: ácidos, bases, sais, óxidos, conceitos da teoria de Arrhenius, nomenclaturas, propriedades e principais compostos</li>
+                        </ul>
+                    </div>
+                    
+                    <div id="fisica" class="mb-6">
+                        <h4 class="text-lg font-medium text-[#0A3D2E] mb-3">FÍSICA</h4>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                            <li>Fundamentos da Física. Grandezas físicas: grandezas físicas escalares e vetoriais, medição de grandezas físicas, sistemas de unidades de medidas de grandezas físicas e transformações de unidades</li>
+                            <li>Sistema Internacional de Unidades (SI)</li>
+                            <li>Mecânica – Noções Básicas: movimento, repouso, trajetória, referencial, ponto material e corpo extenso</li>
+                            <li>Cinemática Escalar: posição e deslocamento, instante de tempo, intervalo de tempo, velocidades instantânea e média, acelerações instantânea e média; representação e interpretação de gráficos cinemáticos, funções horárias de posição, de velocidade e de aceleração; movimentos retilíneos, curvilíneos, circulares, movimentos uniformes (MU) e uniformemente variados (MUV), movimento circular e uniforme (MCU) e uniformemente variado (MCUV); composição de movimentos e lançamento de projéteis no vácuo</li>
+                            <li>Forças: conceito de força, composição e decomposição do vetor força; tipos de forças; Leis de Newton</li>
+                            <li>Gravitação: campo gravitacional, aceleração da gravidade, noções de centro de gravidade, tipos de equilibro (estável, instável e indiferente); peso e massa</li>
+                            <li>Trabalho e Energia: trabalho de uma força; máquinas simples; forças conservativas, energia potencial gravitacional, energia cinética e Princípio da Conservação da Energia Mecânica</li>
+                            <li>Estática: condição de equilíbrio de uma partícula e de um corpo extenso, momento de uma força</li>
+                            <li>Sistema de partículas: centro de massa de um sistema de partículas</li>
+                            <li>Hidrostática: densidade absoluta e pressão; Princípio de Arquimedes e Princípio de Pascal; vasos comunicantes e prensa hidráulica</li>
+                            <li>Termologia – Termometria: temperatura, escalas termométricas e Princípio Zero da Termodinâmica</li>
+                            <li>Calorimetria: conceito de calor, Processos de propagação de calor, calor específico, capacidade térmica, Equação Fundamental da Calorimetria, calor sensível, calor latente e mudanças de estado físico; Princípio das Trocas de Calor e equilíbrio térmico</li>
+                            <li>Propagação do Calor: condução, convecção e radiação</li>
+                            <li>Gases Perfeitos: leis e equação das transformações gasosas, equação de estado de um gás</li>
+                            <li>Termodinâmica: energia interna, 1ª Lei da Termodinâmica</li>
+                            <li>Óptica – Óptica Geométrica: Princípios Básicos da Óptica Geométrica (Propagação Retilínea dos Raios de Luz, Reversibilidade dos Raios de Luz e Independência dos Raios de Luz) e suas aplicações; Leis dos Fenômenos da Reflexão e da Refração; objetos e imagens reais e virtuais, espelhos planos e esféricos, dispersão da luz, lentes delgadas, aparelhos ópticos e problemas da visão</li>
+                            <li>Ondas – Classificação: ondas mecânicas e eletromagnéticas, ondas transversais e longitudinais; variáveis de uma onda: amplitude, comprimento, frequência, período e velocidade de propagação; propagação de ondas em meios unidimensionais e multidimensionais; fenômenos ondulatórios</li>
+                            <li>Ondas Sonoras: natureza, propagação, reflexão, frequência e velocidade de propagação, qualidades fisiológicas do som (altura, intensidade e timbre)</li>
+                            <li>Eletricidade e Magnetismo – Eletrostática: constituição da matéria (estrutura do átomo), carga elétrica elementar, processos de eletrização, íon, condutores e isolantes elétricos. Lei da Conservação da Carga Elétrica e Lei de Coulomb</li>
+                            <li>Eletrodinâmica: efeitos, sentido e intensidade da corrente elétrica; diferença de potencial elétrico (ddp); resistores, reostatos e resistência elétrica, associação de resistores, Leis de Ohm, Efeito Joule (potência e energia elétricas dissipadas num resistor); geradores, receptores e medidores (amperímetros e multímetros) elétricos, circuitos elétricos</li>
+                            <li>Magnetismo e Eletromagnetismo: ímãs, propriedades dos ímãs, bússola, linhas de campo magnético, campo magnético da Terra, Experiência de Oersted e eletroímãs</li>
+                        </ul>
+                    </div>
+                    
+                    <div id="biologia">
+                        <h4 class="text-lg font-medium text-[#0A3D2E] mb-3">BIOLOGIA</h4>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                            <li>Genética e Evolução: Teorias pré-Darwinistas da evolução das espécies; Teoria sintética da evolução; Hereditariedade e diversidade da vida; Lei de Mendel e os princípios básicos que regem a transmissão das características hereditárias; Mutações gênicas e cromossômicas</li>
+                            <li>Biologia molecular: DNA, genes e cromossomos</li>
+                            <li>Ecologia e Meio ambiente: Populações e Comunidades; Conceito de Espécie, População e Comunidade Biológica</li>
+                            <li>Ecossistemas: fatores bióticos e abióticos; Habitat e nicho ecológico; Cadeia alimentar, teia alimentar, sucessão ecológica e comunidade clímax; Interações entre os seres vivos (relações intra-específicas e relações interespecíficas)</li>
+                            <li>Planeta Terra em transformação: Universo, Sistema Solar e Terra - Origem, Forma, Estrutura e Movimentos da Terra; Hipóteses sobre a origem do Universo, da Terra e dos seres vivos</li>
+                            <li>Efeito Estufa e outras transformações na Terra: El Niño, Mudanças Climáticas, Poluição da água, do solo, do ar e Erosão; Ciclos Biogeoquímicos (ciclos da água, carbono, oxigênio, nitrogênio e fósforo); Biomas brasileiros, desmatamento e conservação da biodiversidade</li>
+                            <li>Saúde Pública e saneamento: Noções de saneamento básico e suas relações com a qualidade de vida das populações humanas; Aspectos biológicos da pobreza e do desenvolvimento humano</li>
+                            <li>Doenças parasitárias humanas e as medidas preventivas de saúde: virais, bacterianas e verminoses; Agentes causadores de doenças - caracterização de vírus e bactérias</li>
+                            <li>Epidemias recorrentes e pandemias; Objetivos de Desenvolvimento Sustentável Agenda 2030</li>
+                            <li>Seres Vivos – Características Gerais: Organização celular (membrana plasmática, citoplasma, organelas e núcleo); Divisão celular (mitose e meiose); Metabolismo energético (fotossíntese e respiração celular)</li>
+                            <li>Classificação dos seres vivos: procariontes e eucariontes; sistema de cinco Reinos (Monera, Protista, Fungi, Plantae e Animalia); Funções vitais dos seres vivos e adaptação ao ambiente</li>
+                            <li>Fisiologia Humana: Sistemas respiratório, circulatório e imunológico (antígenos e anticorpos; soros e vacinas; grupos sanguíneos, transplantes e doenças autoimunes); Coordenação das funções vitais dos seres humanos - sistema nervoso e sistema endócrino; Reprodução humana; Infecções Sexualmente Transmissíveis (IST) e métodos contraceptivos</li>
+                            <li>Alimentação e saúde: carboidratos, proteínas e lipídios; Transtornos alimentares</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- English -->
+                <div id="ingles-content" class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold text-[#0A3D2E] mb-4 flex items-center">
+                        <i class="fas fa-language mr-2"></i> V – INGLÊS
+                    </h3>
+                    
+                    <div id="gramatica-ingles" class="mb-6">
+                        <h4 class="text-lg font-medium text-[#0A3D2E] mb-3">GRAMÁTICA</h4>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                            <li>Nouns (countable and uncountable)</li>
+                            <li>Pronouns (subject, object, demonstrative, relative, possessive adjective and possessive)</li>
+                            <li>Articles (definite and indefinite)</li>
+                            <li>Adjectives</li>
+                            <li>Adverbs (manner, modifier and frequency)</li>
+                            <li>Prepositions</li>
+                            <li>Verb tenses (Infinitive, Imperative, Simple Present, Present Continuous, Present Perfect, Future, Simple Past, Past Continuous) - Affirmative, negative, interrogative forms and short answers</li>
+                            <li>Modal Verbs</li>
+                            <li>Quantifiers</li>
+                            <li>Genitive Case</li>
+                            <li>Word order in questions</li>
+                            <li>Linking words</li>
+                            <li>Word formation (prefixes and suffixes)</li>
+                            <li>Conditional clauses (type 1 and 2)</li>
+                        </ul>
+                    </div>
+                    
+                    <div id="compreensao">
+                        <h4 class="text-lg font-medium text-[#0A3D2E] mb-3">COMPREENSÃO DE TEXTO</h4>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                            <li>Reading Comprehension</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- About Section -->
+            <section id="sobre" class="bg-white rounded-lg shadow-md p-6 mb-8">
+                <h2 class="text-2xl font-bold text-[#0A3D2E] mb-6">Sobre o CPACN</h2>
+                <div class="prose max-w-none text-gray-700">
+                    <p>O Concurso de Admissão ao Colégio Naval (CPACN) é um dos mais tradicionais concursos militares do Brasil, destinado a jovens que desejam ingressar na carreira naval.</p>
+                    <p class="mt-4">O CPACN avalia conhecimentos em diversas áreas do ensino fundamental, com provas que testam não apenas o conhecimento teórico, mas também a capacidade de raciocínio lógico e resolução de problemas dos candidatos.</p>
+                    <p class="mt-4">Este material foi cuidadosamente preparado pela equipe do Estratégia Militar para oferecer aos candidatos todo o conteúdo programático de forma organizada e didática, facilitando os estudos e aumentando as chances de aprovação.</p>
+                </div>
+            </section>
+            
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#0A3D2E] text-white py-8 border-t border-[#0a3d2e88]">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-2 mb-4 md:mb-0">
+                    <img src="https://militares.estrategia.com/portal/wp-content/uploads/2021/10/favicon-militares-150x150.webp" alt="Coruja Estratégia Militar" class="h-8 w-8 rounded-full shadow-md">
+                    <div>
+                        <h3 class="font-bold tracking-tight">CPACN 2025</h3>
+                        <p class="text-xs font-medium opacity-80">Estratégia Militar</p>
+                    </div>
+                </div>
+                <div class="text-center md:text-right">
+                    <p class="text-sm">© 2025 Estratégia Militar. Todos os direitos reservados.</p>
+                    <div class="flex justify-center md:justify-end space-x-4 mt-2">
+                        <a href="#" class="text-sm hover:underline">Termos de Uso</a>
+                        <a href="#" class="text-sm hover:underline">Política de Privacidade</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('button.md\\:hidden').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                document.getElementById('mobileMenu').classList.add('hidden');
+            });
+        });
+
+        // Toggle disciplina submenus
+        function toggleDisciplina(disciplina) {
+            const submenu = document.getElementById(`${disciplina}-submenu`);
+            submenu.classList.toggle('hidden');
+            
+            // Rotate chevron icon
+            const icon = document.querySelector(`button[onclick="toggleDisciplina('${disciplina}')"] i`);
+            icon.classList.toggle('fa-chevron-down');
+            icon.classList.toggle('fa-chevron-up');
+        }
+
+        // Highlight active section in sidebar
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id], div[id]');
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            document.querySelectorAll('aside a').forEach(a => {
+                a.classList.remove('font-semibold', 'text-[#0A3D2E]', 'bg-gray-100');
+                if (a.getAttribute('href') === `#${current}`) {
+                    a.classList.add('font-semibold', 'text-[#0A3D2E]', 'bg-gray-100');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
